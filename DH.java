@@ -9,7 +9,16 @@ class DH{
 		
 		int publicKey = ( ( int ) Math.pow( g, privateKey ) ) % n;
 		return publicKey;
+		
 	}
+	
+	public static int generateSessionKey(int privateKey, int publicKey){
+		
+		int sessionKey = ( (int) Math.pow( publicKey, privateKey ) ) % n;
+		return sessionKey;
+		
+	}
+	
 	public static void main(String args[]){
 		
 	}
